@@ -1,0 +1,95 @@
+:root {
+  --color-bg: #fcfcfc;
+  --color-input: #bdbaba;
+  --button-cta: #3bb5f9;
+  --close-element: #f65151;
+  --color-tweetText: #3f3838;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--color-bg);
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.project-title {
+  margin-top: 1.5rem;
+  margin-bottom: 1.88em;
+  font-weight: 400;
+}
+.tweets-title {
+  margin-top: 2.9em;
+  margin-bottom: 1.88em;
+  text-align: center;
+}
+.container {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.75em 2.2em;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: white;
+}
+img {
+  width: 70px;
+  border: 1px solid rgba(0, 0, 0, 0.199);
+  border-radius: 50%;
+  display: block;
+}
+.input-tweet {
+  margin: 0 1em;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+}
+.button--tweet {
+  border: transparent;
+  background: var(--button-cta);
+  color: white;
+  cursor: pointer;
+  transition: all 0.06s ease-out;
+}
+.button--tweet:active {
+  transform: scale(0.99);
+}
+.button--tweet:hover {
+  background: #2ca2e2;
+}
+
+.input-tweet,
+.button--tweet {
+  border-radius: 5px;
+  padding: 1.2em 3em;
+}
+.input-tweet {
+  padding-right: 6em;
+  padding-left: 1em;
+}
+
+.tweet-text {
+  margin-left: 1em;
+}
+.tweet-container {
+  position: relative;
+}
+
+.remove-tweet {
+  --size: 27px;
+  text-decoration: none;
+  background: var(--close-element);
+  width: var(--size);
+  height: var(--size);
+  color: white;
+  text-align: center;
+  line-height: var(--size);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 85%;
+  left: 97%;
+}
