@@ -82,6 +82,8 @@ img {
 .tweet-container {
     width: 95%;
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .remove-tweet {
@@ -120,11 +122,6 @@ img {
     .container-input {
         display: flex;
         flex-direction: column;
-    }
-    .tweet-container {
-        width: 92%;
-        margin-left: auto;
-        margin-right: auto;
     }
     .remove-tweet {
         left: 95%;
