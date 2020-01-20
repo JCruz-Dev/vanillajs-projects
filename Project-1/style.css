@@ -1,96 +1,139 @@
 :root {
-  --color-bg: #fcfcfc;
-  --color-input: #bdbaba;
-  --button-cta: #3bb5f9;
-  --close-element: #f65151;
-  --color-tweetText: #3f3838;
+    --color-bg: #fcfcfc;
+    --color-input: #bdbaba;
+    --button-cta: #3bb5f9;
+    --close-element: #f65151;
+    --color-tweetText: #3f3838;
 }
 *,
 ::before,
 ::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 body {
-  background-color: var(--color-bg);
-  font-family: "Roboto", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    background-color: var(--color-bg);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .project-title {
-  margin-top: 1.5rem;
-  margin-bottom: 1.88em;
-  font-weight: 400;
+    margin-top: 1.5rem;
+    margin-bottom: 1.88em;
+    font-weight: 400;
+    font-size: 1.5em;
+    text-align: center;
 }
 .tweets-title {
-  margin-top: 2.9em;
-  margin-bottom: 1.88em;
-  text-align: center;
+    margin-top: 2.9em;
+    margin-bottom: 1.88em;
+    text-align: center;
 }
 .container {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 0.75em 2.2em;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.75em 2.2em;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background: white;
 }
 img {
-  width: 70px;
-  border: 1px solid rgba(0, 0, 0, 0.199);
-  border-radius: 50%;
-  display: block;
+    width: 70px;
+    border: 1px solid rgba(0, 0, 0, 0.199);
+    border-radius: 50%;
+    display: block;
 }
 .input-tweet {
-  margin: 0 1em;
-  border: 1px solid rgba(0, 0, 0, 0.11);
+    margin: 0 1em;
+    border: 1px solid rgba(0, 0, 0, 0.11);
 }
 .button--tweet {
-  border: transparent;
-  background: var(--button-cta);
-  color: white;
-  cursor: pointer;
-  transition: all 0.06s ease-out;
+    border: transparent;
+    background: var(--button-cta);
+    color: white;
+    cursor: pointer;
+    transition: all 0.06s ease-out;
+    outline: none;
 }
 .button--tweet:active {
-  transform: scale(0.99);
+    transform: scale(0.99);
 }
 .button--tweet:hover {
-  background: #2ca2e2;
+    background: #2ca2e2;
 }
 
 .input-tweet,
 .button--tweet {
-  border-radius: 5px;
-  padding: 1.2em 3em;
+    border-radius: 5px;
+    padding: 1.2em 3em;
 }
 .input-tweet {
-  padding-right: 6em;
-  padding-left: 1em;
+    padding-right: 6em;
+    padding-left: 1em;
 }
 
 .tweet-text {
-  margin-left: 1em;
-  color: var(--color-tweetText);
+    margin-left: 1em;
+    color: var(--color-tweetText);
 }
 .tweet-container {
-  position: relative;
+    width: 95%;
+    position: relative;
 }
 
 .remove-tweet {
-  --size: 27px;
-  text-decoration: none;
-  background: var(--close-element);
-  width: var(--size);
-  height: var(--size);
-  color: white;
-  text-align: center;
-  line-height: var(--size);
-  border-radius: 50%;
-  position: absolute;
-  bottom: 85%;
-  left: 97%;
+    --size: 27px;
+    text-decoration: none;
+    background: var(--close-element);
+    width: var(--size);
+    height: var(--size);
+    color: white;
+    text-align: center;
+    line-height: var(--size);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 80%;
+    left: 97%;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 30rem) {
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+    }
+    .img-container,
+    .input-tweet,
+    .button--tweet {
+        margin-bottom: 1rem;
+    }
+    .input-tweet {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .container-input {
+        display: flex;
+        flex-direction: column;
+    }
+    .tweet-container {
+        width: 92%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .remove-tweet {
+        left: 95%;
+    }
+    .tweets-title {
+        margin-top: 1.8rem;
+        margin-bottom: 1.75rem;
+    }
+    .tweet-text {
+        font-size: 0.9em;
+    }
 }

@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <h1 class="project-title">
-      Project 1 - Use of localStorage and DOM Manipulation
-    </h1>
-    <div class="container">
-      <div class="img-containter">
-        <img src="./assets/user.jpg" alt="user-image" />
-      </div>
-      <div class="container-input">
-        <input
-          type="text"
-          id="tweet-data"
-          placeholder="What's happening"
-          class="input-tweet"
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+            rel="stylesheet"
         />
-        <button id="tweet-action" class="button--tweet">Tweet</button>
-      </div>
-    </div>
-    <section>
-      <h2 class="tweets-title">Your tweets</h2>
-      <article class="container tweet-container">
-        <div class="img-container">
-          <img src="./assets/user.jpg" alt="user-image" />
+    </head>
+    <body>
+        <h1 class="project-title">
+            Project 1 - Use of localStorage and DOM Manipulation
+        </h1>
+        <div class="container form-container">
+            <div class="img-container">
+                <img src="./assets/user.jpg" alt="user-image" />
+            </div>
+            <div class="container-input">
+                <input
+                    type="text"
+                    id="tweet-data"
+                    placeholder="What's happening"
+                    class="input-tweet"
+                />
+                <button id="tweet-action" class="button--tweet">Tweet</button>
+            </div>
         </div>
-        <p class="tweet-text">
-          I’m very happy to tweet something today. I’ts very nice
-        </p>
-        <a href="#" class="remove-tweet" id="remove-tweet">X</a>
-      </article>
-    </section>
-    <script src="app.js"></script>
-  </body>
+        <section>
+            <h2 class="tweets-title">Your tweets</h2>
+            <article class="container tweet-container">
+                <div class="img-container">
+                    <img src="./assets/user.jpg" alt="user-image" />
+                </div>
+                <p class="tweet-text">
+                    I’m very happy to tweet something today. I’ts very nice
+                </p>
+                <a href="#" class="remove-tweet" id="remove-tweet">X</a>
+            </article>
+        </section>
+        <script src="app.js"></script>
+    </body>
 </html>
