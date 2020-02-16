@@ -59,25 +59,35 @@ tweetForm.addEventListener('submit', e => {
 })
 sectionContainer.addEventListener('click', e => {
     if (e.target.classList.contains('remove-tweet')) {
-        removeFromLocalStorage(e.target.nextElementSibling.childNodes[3].innerText)
+        let tweetText = e.target.nextElementSibling.childNodes[3];
+        removeFromLocalStorage(tweetText.innerText)
         e.target.parentElement.remove()
     }
     if(e.target.classList.contains('tweet-edit')){
         e.target.style.display = 'none'
-        state.prev = e.target.parentElement.parentElement.childNodes[3].innerText
-        e.target.parentElement.parentElement.childNodes[5].classList.toggle('hide-save');
+        //DOM Elements
+        let tweetTextContainer = e.target.parentElement.parentElement.childNodes[3]
+        let tweetSaveButton = e.target.parentElement.parentElement.childNodes[5]
 
-        if(e.target.parentElement.parentElement.childNodes[3].hasAttribute('contenteditable')){
-            e.target.parentElement.parentElement.childNodes[3].removeAttribute('contenteditable')
+        state.prev = tweetTextContainer.innerText
+        tweetSaveButton.classList.toggle('hide-save');
+
+        if(tweetTextContainer.hasAttribute('contenteditable')){
+            tweetTextContainer.removeAttribute('contenteditable')
         }else{
-            e.target.parentElement.parentElement.childNodes[3].setAttribute('contenteditable', true)
-            selectElementContents(e.target.parentElement.parentElement.childNodes[3])
+            tweetTextContainer.setAttribute('contenteditable', true)
+            selectElementContents(tweetTextContainer)
         }
     }
     if(e.target.classList.contains('tweet-save')){
-        state.update = e.target.previousElementSibling.innerText
-        e.target.previousElementSibling.removeAttribute('contenteditable')
+        //DOM Elements
+        let tweetTextElement = e.target.previousElementSibling
+        let tweetEditElement = e.target.previousElementSibling.previousElementSibling.childNodes[5]
+
+        state.update = tweetTextElement.innerText
+        tweetTextElement.removeAttribute('contenteditable')
         e.target.classList.toggle('hide-save')
+
         //Get Items from localstorage to save new edited item
         if(state.prev !== state.update){
             let tweets = JSON.parse(localStorageProvider.getItems());
@@ -88,7 +98,7 @@ sectionContainer.addEventListener('click', e => {
             state.update = '';
 
         }
-        e.target.previousElementSibling.previousElementSibling.childNodes[5].style.display = 'block'
+        tweetEditElement.style.display = 'block'
     }
 })
 
@@ -124,6 +134,7 @@ function selectElementContents(el) {
     sel.addRange(range);
 }
 function tweetTime() {
+    //Gets the current Time and display it in format HH:mm am/pm
     let dateTime = new Date();
     let hours = dateTime.getHours();
     let minutes = dateTime.getMinutes();
