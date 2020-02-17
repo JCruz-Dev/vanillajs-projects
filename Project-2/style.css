@@ -1,0 +1,66 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(to right, #141e30, #243b55);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.button-container {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+}
+.body-title,
+.button-signout {
+    color: white;
+}
+.button-signout {
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 0.8rem 1.5rem;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+
+    border-radius: 2px;
+}
+.button-signout:hover {
+    background-color: white;
+    color: black;
+}
+.user-img {
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid rgb(46, 137, 255);
+    margin-bottom: 1rem;
+    position: absolute;
+    top: 150px;
+    z-index: 10;
+    right: 670px;
+}
+.user-info {
+    position: relative;
+    width: 100%;
+    max-width: 20%;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 6rem;
+    padding-bottom: 1rem;
+    border-radius: 2px;
+    margin-top: 4.5rem;
+}
+.info-id {
+    font-weight: bold;
+    border: 1px solid rgb(46, 137, 255);
+    border-radius: 5px;
+    padding: 0.5em 0.5em;
+}
+.info-name {
+    margin-top: 1.5rem;
+}

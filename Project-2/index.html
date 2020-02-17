@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="google-signin-client_id"
+            content="770449088572-qldckakvr73hpp1jaf4ia27j9sshin2q.apps.googleusercontent.com"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <title>Google sign in</title>
+    </head>
+    <body>
+        <h1 id="body-title" class="body-title">
+            Welcome, sign in with google to continue
+        </h1>
+        <div
+            class="g-signin2 button-container"
+            data-onsuccess="onSignIn"
+            id="google-signin"
+        ></div>
+        <a href="#" onclick="signOut();" class="button-signout">Sign out</a>
+        <div class="info-container" id="info-container">
+            <!-- <img
+                src="https://randomuser.me/api/portraits/men/46.jpg"
+                alt="user-img"
+                class="user-img"
+            />
+            <div class="user-info">
+                <span class="info-id">123456848EDRs</span>
+                <p class="info-name">Juan Carlos</p>
+                <p class="info-email">juancarloscruz278@gmail.com</p>
+            </div> -->
+        </div>
+    </body>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="app.js"></script>
+</html>
