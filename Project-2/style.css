@@ -19,6 +19,9 @@ body {
     display: flex;
     justify-content: center;
 }
+.body-title {
+    margin-top: 2rem;
+}
 .body-title,
 .button-signout {
     color: white;
@@ -30,6 +33,8 @@ body {
     transition: all 0.2s ease-in-out;
     display: inline-block;
     border-radius: 2px;
+    margin-top: 1.5rem;
+    margin-bottom: 4rem;
 }
 .button-signout:hover {
     background-color: white;
@@ -39,24 +44,23 @@ body {
     width: 100px;
     border-radius: 50%;
     border: 3px solid rgb(var(--color-blue));
-    margin-bottom: 1rem;
-    position: absolute;
-    top: 150px;
-    right: 670px;
-    z-index: 10;
+    margin-bottom: 1.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -6rem;
 }
 .user-info {
-    position: relative;
-    width: 100%;
-    max-width: 20%;
+    width: 30%;
     background: white;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 4.5rem;
+    padding-top: 1.5rem;
     padding-bottom: 1rem;
     border-radius: 2px;
     margin-top: 4.5rem;
 }
+
 .info-id {
     font-weight: bold;
     border: 1px solid rgb(var(--color-blue));
@@ -65,4 +69,24 @@ body {
 }
 .info-name {
     margin-top: 1.5rem;
+}
+@media screen and (min-width: 320px) {
+    .body-title {
+        font-size: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .user-info {
+        width: 90%;
+    }
+}
+@media screen and (min-width: 768px) {
+    .user-info {
+        width: 50%;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .user-info {
+        width: 30%;
+    }
 }

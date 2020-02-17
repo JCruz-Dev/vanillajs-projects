@@ -12,12 +12,12 @@ function onSignIn(googleUser) {
     var id_token = googleUser.getAuthResponse().id_token;
     var profile = googleUser.getBasicProfile();
     container.innerHTML = `
+    <div class="user-info">
     <img
        src="${profile.getImageUrl()}"
         alt="user-img"
         class="user-img"
     />
-    <div class="user-info">
         <span class="info-id">${profile.getId()}</span>
         <p class="info-name">${profile.getName()}</p>
         <p class="info-email">${profile.getEmail()}</p>
