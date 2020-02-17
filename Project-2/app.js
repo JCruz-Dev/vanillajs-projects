@@ -1,6 +1,7 @@
 let container = document.getElementById('info-container');
 let buttonSignIng = document.getElementById('google-signin');
 let buttonSignOut = document.querySelector('.button-signout');
+let title =  document.getElementById('body-title');
 
 document.addEventListener('DOMContentLoaded', () => {
     if(!localStorage.getItem('token')){
@@ -24,6 +25,7 @@ function onSignIn(googleUser) {
     </div>
     `;
     localStorageProvider.saveLS(id_token)
+    title.textContent = `Welcome ${profile.getName()}`
     buttonSignIng.style.display = 'none'
     buttonSignOut.style.display = 'inline-block'
 
@@ -37,6 +39,7 @@ function signOut() {
     localStorageProvider.deleteLS()
     window.location.reload()
     buttonSignIng.style.display = 'block'
+    title.textContent = 'Welcome, Sign in with google to continue'
 }
 let localStorageProvider = {
     saveLS: (token) => {
