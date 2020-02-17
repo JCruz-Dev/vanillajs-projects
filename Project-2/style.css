@@ -3,6 +3,9 @@
 ::after {
     box-sizing: border-box;
 }
+:root {
+    --color-blue: 46, 137, 255;
+}
 body {
     background: linear-gradient(to right, #141e30, #243b55);
     text-align: center;
@@ -26,7 +29,6 @@ body {
     padding: 0.8rem 1.5rem;
     transition: all 0.2s ease-in-out;
     display: inline-block;
-
     border-radius: 2px;
 }
 .button-signout:hover {
@@ -36,12 +38,12 @@ body {
 .user-img {
     width: 100px;
     border-radius: 50%;
-    border: 3px solid rgb(46, 137, 255);
+    border: 3px solid rgb(var(--color-blue));
     margin-bottom: 1rem;
     position: absolute;
     top: 150px;
-    z-index: 10;
     right: 670px;
+    z-index: 10;
 }
 .user-info {
     position: relative;
@@ -50,14 +52,14 @@ body {
     background: white;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 6rem;
+    padding-top: 4.5rem;
     padding-bottom: 1rem;
     border-radius: 2px;
     margin-top: 4.5rem;
 }
 .info-id {
     font-weight: bold;
-    border: 1px solid rgb(46, 137, 255);
+    border: 1px solid rgb(var(--color-blue));
     border-radius: 5px;
     padding: 0.5em 0.5em;
 }

@@ -2,6 +2,12 @@ let container = document.getElementById('info-container');
 let buttonSignIng = document.getElementById('google-signin');
 let buttonSignOut = document.querySelector('.button-signout');
 
+document.addEventListener('DOMContentLoaded', () => {
+    if(!localStorage.getItem('token')){
+        buttonSignOut.style.display = 'none'
+    }
+})
+
 function onSignIn(googleUser) {
     var id_token = googleUser.getAuthResponse().id_token;
     var profile = googleUser.getBasicProfile();
@@ -19,6 +25,8 @@ function onSignIn(googleUser) {
     `;
     localStorageProvider.saveLS(id_token)
     buttonSignIng.style.display = 'none'
+    buttonSignOut.style.display = 'inline-block'
+
 }
 function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
@@ -27,8 +35,8 @@ function signOut() {
     });
     container.innerHTML = '';
     localStorageProvider.deleteLS()
-    buttonSignIng.style.display = 'block'
     window.location.reload()
+    buttonSignIng.style.display = 'block'
 }
 let localStorageProvider = {
     saveLS: (token) => {
