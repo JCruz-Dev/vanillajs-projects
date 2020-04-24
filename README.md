@@ -9,5 +9,6 @@ URL: https://dom-ls-project.now.sh/
 
 **Project 2**: I use the Google API sign in feature to get data from the user and display on screen. There is a sign out feature too.
 URL: https://google-signin.now.sh/
+--
 
 **Project 3**: I simulate a shopping cart with javascript.
